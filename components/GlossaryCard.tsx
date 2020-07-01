@@ -16,6 +16,7 @@ const GlossaryCard = ({ term }) => {
       borderWidth="1px"
       bg="white"
       paddingY={4}
+      paddingX={2}
     >
       <Flex
         direction="row"
@@ -39,17 +40,33 @@ const GlossaryCard = ({ term }) => {
         </Box>
         <Box d="flex" alignItems="baseline">
           <Flex direction="row">
-            <Badge rounded="md" marginRight="1" variantColor="purple">
-              Group
+            <Badge
+              rounded="md"
+              marginRight="1"
+              variantColor="purple"
+              variant="outline"
+            >
+              {term.group}
             </Badge>
-            <Badge rounded="md" marginLeft="1" variantColor="teal">
-              Week
+            <Badge
+              rounded="md"
+              marginLeft="1"
+              variantColor="purple"
+              variant="outline"
+            >
+              Week {term.week}
             </Badge>
           </Flex>
         </Box>
       </Flex>
       <Flex direction="column" align="center" justify="center" padding={4}>
-        <Box height="150px">
+        <Box
+          height="150px"
+          display="flex"
+          flexDirection="column"
+          alignItems="center"
+          justifyContent="center"
+        >
           <Text
             color="gray.500"
             letterSpacing={["normal", "normal", "wide", "wide"]}
@@ -57,8 +74,8 @@ const GlossaryCard = ({ term }) => {
             paddingBottom={4}
           >
             {showDefinition
-              ? "Definition | Lorem ipsum dolor sit amet, consectetur adipisicing elit. Totam voluptas expedita et ea eaque, fugit recusandae mollitia doloribus consectetur corrupti."
-              : "Do your best to remember what this term means! Click the button to show the definition when you're ready."}
+              ? term.definition
+              : `Do your best to remember what ${term.name} means!`}
           </Text>
         </Box>
 

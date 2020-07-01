@@ -32,7 +32,12 @@ type Props = {
 const GlossaryView = ({ terms }: Props) => {
   return (
     <Flex direction="column" justify="center" align="center" gridArea="main">
-      <Box maxWidth="960px" margin="0 auto" paddingX={4} paddingY={4}>
+      <Box
+        maxWidth="960px"
+        margin="0 auto"
+        paddingX={[1, 2, 4, 8]}
+        paddingY={4}
+      >
         <GlossaryGrid terms={termsTest} />
       </Box>
     </Flex>
