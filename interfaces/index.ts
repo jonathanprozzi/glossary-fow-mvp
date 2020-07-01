@@ -6,7 +6,7 @@
 
 export type Glossary = {
   id: number;
-  term: string;
+  name: string;
   definition: string;
   week: number;
   group: string;

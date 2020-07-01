@@ -3,7 +3,7 @@ import { PseudoBox, Box, Badge, Text, Button, Flex } from "@chakra-ui/core";
 
 // term, definition, group, week
 
-const GlossaryCard = () => {
+const GlossaryCard = ({ term }) => {
   const [showDefinition, setShowDefinition] = useState(false);
 
   return (
@@ -35,7 +35,7 @@ const GlossaryCard = () => {
           fontSize="md"
           textTransform="uppercase"
         >
-          Term
+          {term.name}
         </Box>
         <Box d="flex" alignItems="baseline">
           <Flex direction="row">

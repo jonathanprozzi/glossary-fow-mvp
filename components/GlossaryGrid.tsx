@@ -1,7 +1,12 @@
 import { Box, Grid } from "@chakra-ui/core";
+import { Glossary } from "../interfaces";
 import GlossaryCard from "./GlossaryCard";
 
-const GlossaryGrid = ({ items }) => {
+type Props = {
+  terms: Glossary[];
+};
+
+const GlossaryGrid = ({ terms }: Props) => {
   return (
     <Box marginY={4} marginX={[2, 4, 10, 12]}>
       <Grid
@@ -13,9 +18,9 @@ const GlossaryGrid = ({ items }) => {
         ]}
         gap={6}
       >
-        {glossaryData.map((term) => (
+        {terms.map((term) => (
           <>
-            <GlossaryCard key={term.id} data={term} />
+            <GlossaryCard key={term.id} term={term} />
           </>
         ))}
       </Grid>

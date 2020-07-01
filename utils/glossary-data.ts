@@ -4,7 +4,7 @@ import { Glossary } from "../interfaces";
 export const glossaryData: Glossary[] = [
   {
     id: 100,
-    term: "(User) Profile",
+    name: "(User) Profile",
     definition:
       "The public - facing information about yourself you put online for any program.",
     week: 1,
@@ -12,7 +12,7 @@ export const glossaryData: Glossary[] = [
   },
   {
     id: 101,
-    term: "Cloud",
+    name: "Cloud",
     definition:
       "Servers that are accessed online and hold data. This can serve as a back-up to a computer and prevent too much data saved to a physical device.",
     week: 1,
