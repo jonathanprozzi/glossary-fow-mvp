@@ -1,7 +1,12 @@
-import { Heading } from "@chakra-ui/core";
+import { Flex } from "@chakra-ui/core";
+import GlossaryCard from "../components/GlossaryCard";
 
 const IndexPage = () => {
-  return <Heading as="h1">Hi</Heading>;
+  return (
+    <Flex direction="column" justify="center" align="center" gridArea="main">
+      <GlossaryCard />
+    </Flex>
+  );
 };
 
 export default IndexPage;

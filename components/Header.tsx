@@ -20,7 +20,7 @@ const Header: React.FC = () => {
         width={["100vw", "100vw", "80vw", "80vw"]}
         paddingX={[4, 4, 6, 8]}
       >
-        <Heading as="h1" size="md" color="purple.50">
+        <Heading as="h1" size="xl" color="purple.50">
           Interactive Glossary
         </Heading>
       </Flex>
