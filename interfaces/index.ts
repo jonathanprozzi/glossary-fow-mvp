@@ -9,4 +9,5 @@ export type Glossary = {
   term: string;
   definition: string;
   week: number;
+  group: string;
 };
