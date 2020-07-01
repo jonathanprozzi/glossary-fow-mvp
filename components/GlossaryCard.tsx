@@ -13,34 +13,28 @@ const GlossaryCard = () => {
       rounded="lg"
       borderWidth="1px"
       bg="white"
+      paddingY={4}
     >
-      <Box
-        as="h3"
-        display="flex"
-        flexDirection="column"
-        flexGrow={2}
-        color="gray.500"
-        fontWeight="semibold"
-        letterSpacing="wide"
-        fontSize="md"
-        paddingLeft="4"
-        paddingTop="4"
-        textTransform="uppercase"
+      <Flex
+        direction="row"
+        align="baseline"
+        justify="center"
+        paddingX={4}
+        paddingTop={4}
       >
-        Term
-      </Box>
-
-      <Flex direction="column" align="center" justify="center" padding={4}>
-        <Text
+        <Box
+          as="h3"
+          display="flex"
+          flexDirection="column"
+          flexGrow={2}
           color="gray.500"
-          letterSpacing={["normal", "normal", "wide", "wide"]}
-          margin="0 auto"
-          paddingBottom={4}
+          fontWeight="semibold"
+          letterSpacing="wide"
+          fontSize="md"
+          textTransform="uppercase"
         >
-          {showDefinition
-            ? "Definition | Lorem ipsum dolor sit amet, consectetur adipisicing elit. Totam voluptas expedita et ea eaque, fugit recusandae mollitia doloribus consectetur corrupti."
-            : "Do your best to remember what this term means! Click the button to show the definition when you're ready."}
-        </Text>
+          Term
+        </Box>
         <Box d="flex" alignItems="baseline">
           <Flex direction="row">
             <Badge rounded="md" marginRight="1" variantColor="purple">
@@ -51,8 +45,27 @@ const GlossaryCard = () => {
             </Badge>
           </Flex>
         </Box>
-        <Button variantColor="purple" variant="outline" margin={4}>
-          Show Definition
+      </Flex>
+      <Flex direction="column" align="center" justify="center" padding={4}>
+        <Box height="150px">
+          <Text
+            color="gray.500"
+            letterSpacing={["normal", "normal", "wide", "wide"]}
+            margin="0 auto"
+            paddingBottom={4}
+          >
+            {showDefinition
+              ? "Definition | Lorem ipsum dolor sit amet, consectetur adipisicing elit. Totam voluptas expedita et ea eaque, fugit recusandae mollitia doloribus consectetur corrupti."
+              : "Do your best to remember what this term means! Click the button to show the definition when you're ready."}
+          </Text>
+        </Box>
+
+        <Button
+          variantColor="purple"
+          variant="outline"
+          onClick={() => setShowDefinition(!showDefinition)}
+        >
+          {showDefinition ? "Show " : "Hide "} Definition
         </Button>
       </Flex>
     </PseudoBox>
