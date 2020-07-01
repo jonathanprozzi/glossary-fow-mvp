@@ -4,7 +4,9 @@
 //
 // import User from 'path/to/interfaces';
 
-export type User = {
-  id: number
-  name: string
-}
+export type Glossary = {
+  id: number;
+  term: string;
+  definition: string;
+  week: number;
+};
