@@ -1,6 +1,5 @@
 import Header from "./Header";
-import { Footer } from "./Footer";
-import { Box, Flex } from "@chakra-ui/core";
+import { Box } from "@chakra-ui/core";
 
 const SiteLayout: React.FC = ({ children }) => {
   return (
