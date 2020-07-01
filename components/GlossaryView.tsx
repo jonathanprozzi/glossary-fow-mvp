@@ -1,8 +1,10 @@
-import { Flex, Box } from "@chakra-ui/core";
-import GlossaryGrid from "../components/GlossaryGrid";
+import { GetStaticProps } from "next";
 import { Glossary } from "../interfaces/";
 import { glossaryData } from "../utils/glossary-data";
-import { GetStaticProps } from "next";
+import { Flex, Box } from "@chakra-ui/core";
+import GlossaryGrid from "../components/GlossaryGrid";
+
+// TODO: troubleshoot why getStaticProps isnt passing data into props
 
 const termsTest = [
   {
@@ -41,4 +43,5 @@ export const getStaticProps: GetStaticProps = async () => {
   const terms: Glossary[] = glossaryData;
   return { props: { terms } };
 };
+
 export default GlossaryView;
