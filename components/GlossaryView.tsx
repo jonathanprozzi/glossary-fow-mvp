@@ -1,14 +1,16 @@
 import { Flex, Box } from "@chakra-ui/core";
-import GlossaryView from "../components/GlossaryView";
+import GlossaryCard from "../components/GlossaryCard";
+import { Glossary } from "../interfaces";
+import { glossaryData } from "../utils/glossary-data";
 
-const IndexPage = () => {
+const GlossaryView = () => {
   return (
     <Flex direction="column" justify="center" align="center" gridArea="main">
       <Box maxWidth="960px" margin="0 auto" paddingX={4} paddingY={4}>
-        <GlossaryView />
+        <GlossaryCard />
       </Box>
     </Flex>
   );
 };
 
-export default IndexPage;
+export default GlossaryView;

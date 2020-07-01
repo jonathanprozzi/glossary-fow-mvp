@@ -1,6 +1,8 @@
 import { useState } from "react";
 import { PseudoBox, Box, Badge, Text, Button, Flex } from "@chakra-ui/core";
 
+// term, definition, group, week
+
 const GlossaryCard = () => {
   const [showDefinition, setShowDefinition] = useState(false);
 
