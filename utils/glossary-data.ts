@@ -211,8 +211,78 @@ export const glossaryData: Glossary[] = [
     id: 127,
     name: "Workspaces - Slack",
     definition:
-      "This is the shared hub made up of channels and messages for a team. You can be a member of multiple Workspaces in Slack",
+      "This is the shared hub made up of channels and messages for a team. You can be a member of multiple Workspaces in Slack.",
     week: 1,
     group: "Slack",
+  },
+  {
+    id: 128,
+    name: "Attachments",
+    definition: "Files added onto an email for the recipient.",
+    week: 1,
+    group: "Email",
+  },
+  {
+    id: 129,
+    name: "BCC",
+    definition:
+      "Blind carbon copy; folks get a copy of the email but cannot see the email list of recipients.",
+    week: 1,
+    group: "Email",
+  },
+  {
+    id: 130,
+    name: "CC",
+    definition:
+      "Carbon copy; sending additional copies of an email to other people, think of “courtesy copy” the email list is visible to all other recipients.",
+    week: 1,
+    group: "Email",
+  },
+  {
+    id: 131,
+    name: "Contact",
+    definition:
+      "The saving of folks' contact information like email addresses and phone numbers.",
+    week: 1,
+    group: "Email",
+  },
+  {
+    id: 132,
+    name: "Etiquette",
+    definition: "Manners and best practices for sending email messages.",
+    week: 1,
+    group: "Email",
+  },
+  {
+    id: 133,
+    name: "Groups (email)",
+    definition:
+      "Contacts that are placed together. When a group owner sends an email to an email group, everyone within that label receives the message.",
+    week: 1,
+    group: "Email",
+  },
+  {
+    id: 134,
+    name: "Signature (email)",
+    definition:
+      "Comes at the end of an email message as a sign off. Often includes your name and contact information.",
+    week: 1,
+    group: "Email",
+  },
+  {
+    id: 135,
+    name: "Subject Line",
+    definition:
+      "Summarizes the content of the e-mail and can determine how urgent the message is.",
+    week: 1,
+    group: "Email",
+  },
+  {
+    id: 136,
+    name: "TO",
+    definition:
+      "TThis sends the message directly to an individual, they can see both BCC’d and CC’d contacts on the email.",
+    week: 1,
+    group: "Email",
   },
 ];
