@@ -84,7 +84,7 @@ const GlossaryCard = ({ term }) => {
           variant="outline"
           onClick={() => setShowDefinition(!showDefinition)}
         >
-          {showDefinition ? "Show " : "Hide "} Definition
+          {!showDefinition ? "Show " : "Hide "} Definition
         </Button>
       </Flex>
     </PseudoBox>
