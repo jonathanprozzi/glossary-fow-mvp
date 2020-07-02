@@ -154,4 +154,65 @@ export const glossaryData: Glossary[] = [
     week: 1,
     group: "General",
   },
+  {
+    id: 120,
+    name: "Zoom",
+    definition: "A paid video conferencing platform.",
+    week: 1,
+    group: "Slack",
+  },
+  {
+    id: 121,
+    name: "Channels",
+    definition: "A paid video conferencing platform.",
+    week: 1,
+    group: "Slack",
+  },
+  {
+    id: 122,
+    name: "Direct Messages",
+    definition:
+      "Designated chat rooms that are invite-only and generally have a topic or purpose.",
+    week: 1,
+    group: "Slack",
+  },
+  {
+    id: 123,
+    name: "Mentions",
+    definition:
+      "When someone uses the “@” symbol to tag another individual in a message. This individual will receive a notification they have been tagged.",
+    week: 1,
+    group: "Slack",
+  },
+  {
+    id: 124,
+    name: "Notifications",
+    definition: "An alert to a message, tag or update from a program.",
+    week: 1,
+    group: "Slack",
+  },
+  {
+    id: 125,
+    name: "Threads",
+    definition:
+      "Responding to a message that starts a chain. This is helpful to keep ideas together.",
+    week: 1,
+    group: "Slack",
+  },
+  {
+    id: 126,
+    name: "Tool Fatigue",
+    definition:
+      "Feeling of exhaustion or being overwhelmed from using too many programs that have similar features (exp; Slack and email).",
+    week: 1,
+    group: "Slack",
+  },
+  {
+    id: 127,
+    name: "Workspaces - Slack",
+    definition:
+      "This is the shared hub made up of channels and messages for a team. You can be a member of multiple Workspaces in Slack",
+    week: 1,
+    group: "Slack",
+  },
 ];
