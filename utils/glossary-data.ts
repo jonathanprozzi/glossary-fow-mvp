@@ -279,10 +279,85 @@ export const glossaryData: Glossary[] = [
   },
   {
     id: 136,
-    name: "TO",
+    name: "To",
     definition:
-      "TThis sends the message directly to an individual, they can see both BCC’d and CC’d contacts on the email.",
+      "This sends the message directly to an individual, they can see both BCC'd and CC'd contacts on the email.",
     week: 1,
     group: "Email",
+  },
+  {
+    id: 137,
+    name: "Accept invitations",
+    definition: 'To say "yes" to an event invitation.',
+    week: 1,
+    group: "Calendar",
+  },
+  {
+    id: 138,
+    name: "Decline invitations",
+    definition: 'To say "no" to an event invitation.',
+    week: 1,
+    group: "Calendar",
+  },
+  {
+    id: 139,
+    name: "Events",
+    definition: "Any scheduled chunk of time on you calendar.",
+    week: 1,
+    group: "Calendar",
+  },
+  {
+    id: 140,
+    name: "Keyboard shortcuts",
+    definition:
+      "Using a combination of keys on your keyboard to execute functions (for example, ctrl + p is paste in Windows).",
+    week: 1,
+    group: "Calendar",
+  },
+  {
+    id: 141,
+    name: "Navigation buttons",
+    definition: "Little arrows on your calendar to select months/days/weeks.",
+    week: 1,
+    group: "Calendar",
+  },
+  {
+    id: 142,
+    name: "Organizer",
+    definition: "Host or creator of a calendar invite.",
+    week: 1,
+    group: "Calendar",
+  },
+  {
+    id: 143,
+    name: "Permissions (to calendar)",
+    definition:
+      "Limit what someone can access on your calendar; relates to teleliteracy.",
+    week: 1,
+    group: "Calendar",
+  },
+  {
+    id: 144,
+    name: "Personal preference",
+    definition:
+      "Customizing settings in a program to those you like and are easiest for you to work with.",
+    week: 1,
+    group: "Calendar",
+  },
+  {
+    id: 145,
+    name: "Recurring (event)",
+    definition:
+      "An event that happens regularly or more than once for a duration of time such as daily, weekly, or monthly.",
+    week: 1,
+    group: "Calendar",
+  },
+  {
+    id: 146,
+    name: "Subscribe (to a calendar)",
+    definition:
+      "Get access to another calendar that isn't yours. You are able to see updates and events for someone else.",
+    week: 1,
+    group: "Calendar",
   },
 ];
