@@ -13,7 +13,7 @@ const GlossaryCard = ({ term }: Props) => {
   // TODO: find way to not hard code the dates
   const mapWeekToDate = (week: number) => {
     if (week === 1) {
-      const tempDate = parse("7/13/2020", "MM/dd/yyyy", new Date());
+      const tempDate = parse("7/1/2020", "MM/dd/yyyy", new Date());
       console.log("date after:", isAfter(Date.now(), tempDate));
       return isAfter(Date.now(), tempDate);
     }
