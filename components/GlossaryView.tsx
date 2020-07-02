@@ -22,9 +22,4 @@ const GlossaryView = ({ terms }: Props) => {
   );
 };
 
-export const getStaticProps: GetStaticProps = async () => {
-  const terms: Glossary[] = glossaryData;
-  return { props: { terms } };
-};
-
 export default GlossaryView;
