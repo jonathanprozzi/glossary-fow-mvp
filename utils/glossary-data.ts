@@ -483,4 +483,96 @@ export const glossaryData: Glossary[] = [
     week: 1,
     group: "Sheets",
   },
+  {
+    id: 163,
+    name: "Absolute Questions",
+    definition:
+      'Using "always" when writing questions. Prevents target audience from giving useful feedback.',
+    week: 1,
+    group: "Forms",
+  },
+  {
+    id: 164,
+    name: "Close Ended Questions",
+    definition: "Questions that be answered in a one-word reply.",
+    week: 1,
+    group: "Forms",
+  },
+  {
+    id: 165,
+    name: "Data Collection",
+    definition:
+      "The purposeful act of accumulating accurate information on a subject.",
+    week: 1,
+    group: "Forms",
+  },
+  {
+    id: 166,
+    name: "Double Barreled Question",
+    definition: "Asking two or more questions at the same time.",
+    week: 1,
+    group: "Forms",
+  },
+  {
+    id: 167,
+    name: "Form",
+    definition: "Tool for creating questions to collect data on a subject.",
+    week: 1,
+    group: "Forms",
+  },
+  {
+    id: 168,
+    name: "Leading Questions",
+    definition:
+      "Questions that force a reader to sway to one side often to the benefit of the surveyor (person asking the question).",
+    week: 1,
+    group: "Forms",
+  },
+  {
+    id: 169,
+    name: "Objective",
+    definition:
+      "Not influenced by personal feelings or prejudices; unbiased in decision.",
+    week: 1,
+    group: "Forms",
+  },
+  {
+    id: 170,
+    name: "Open Ended Questions",
+    definition:
+      "Questions that require more than one word to answer. These generally result in quan data.",
+    week: 1,
+    group: "Forms",
+  },
+  {
+    id: 171,
+    name: "Qualitative Data",
+    definition:
+      "Data based on experiences like feelings, colors, and visual models like paintings",
+    week: 1,
+    group: "Forms",
+  },
+  {
+    id: 172,
+    name: "Quantitative Data",
+    definition: "Numerical data",
+    week: 1,
+    group: "Forms",
+  },
+  {
+    id: 173,
+    name: "Questionnaires / Surveys",
+    definition:
+      "A series of questions used to gather information from a target audience.",
+    week: 1,
+    group: "Forms",
+  },
+  {
+    id: 174,
+    name: "Target Audience",
+    definition:
+      "The group of people your data collection or product is aimed toards.",
+    week: 1,
+    group: "Forms",
+  },
 ];
