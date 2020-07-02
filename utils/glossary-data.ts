@@ -575,4 +575,26 @@ export const glossaryData: Glossary[] = [
     week: 1,
     group: "Forms",
   },
+  {
+    id: 175,
+    name: "Presentation",
+    definition:
+      "A slideshow, poster, or talk where someone or a group is presenting a topic and others are listening/observing.",
+    week: 1,
+    group: "Slides",
+  },
+  {
+    id: 176,
+    name: "Slideshow",
+    definition: "A series of slides containing images, videos, and/or text.",
+    week: 1,
+    group: "Slides",
+  },
+  {
+    id: 177,
+    name: "Upload",
+    definition: "To attach a file to a something.",
+    week: 1,
+    group: "Slides",
+  },
 ];
