@@ -1,10 +1,23 @@
 import { useState } from "react";
+import { Glossary } from "../interfaces/";
 import { PseudoBox, Box, Badge, Text, Button, Flex } from "@chakra-ui/core";
+import { parse, toDate, isAfter } from "date-fns";
 
-// term, definition, group, week
+type Props = {
+  term: Glossary;
+};
 
-const GlossaryCard = ({ term }) => {
+const GlossaryCard = ({ term }: Props) => {
   const [showDefinition, setShowDefinition] = useState(false);
+  console.log("week", term.week);
+
+  const mapWeekToDate = (week) => {
+    if (week === 1) {
+      const tempDate = parse("7/13/2020", "MM/dd/yyyy", new Date());
+      console.log("date after:", isAfter(Date.now(), tempDate));
+      return isAfter(Date.now(), tempDate);
+    }
+  };
 
   return (
     <PseudoBox
@@ -86,6 +99,7 @@ const GlossaryCard = ({ term }) => {
         >
           {!showDefinition ? "Show " : "Hide "} Definition
         </Button>
+        {mapWeekToDate(term.week) ? "true" : "false"}
       </Flex>
     </PseudoBox>
   );
