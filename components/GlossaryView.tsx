@@ -1,4 +1,3 @@
-import { GetStaticProps } from "next";
 import { Flex, Box } from "@chakra-ui/core";
 import { Glossary } from "../interfaces/";
 import GlossaryGrid from "../components/GlossaryGrid";
