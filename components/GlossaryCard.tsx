@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { Glossary } from "../interfaces/";
 import { PseudoBox, Box, Badge, Text, Button, Flex } from "@chakra-ui/core";
-import { parse, toDate, isAfter } from "date-fns";
+import { parse, isAfter } from "date-fns";
 
 type Props = {
   term: Glossary;
@@ -11,9 +11,30 @@ const GlossaryCard = ({ term }: Props) => {
   const [showDefinition, setShowDefinition] = useState(false);
   console.log("week", term.week);
 
-  const mapWeekToDate = (week) => {
+  // TODO: find way to not hard code the dates
+  const mapWeekToDate = (week: number) => {
     if (week === 1) {
       const tempDate = parse("7/13/2020", "MM/dd/yyyy", new Date());
+      console.log("date after:", isAfter(Date.now(), tempDate));
+      return isAfter(Date.now(), tempDate);
+    }
+    if (week === 2) {
+      const tempDate = parse("7/20/2020", "MM/dd/yyyy", new Date());
+      console.log("date after:", isAfter(Date.now(), tempDate));
+      return isAfter(Date.now(), tempDate);
+    }
+    if (week === 3) {
+      const tempDate = parse("7/27/2020", "MM/dd/yyyy", new Date());
+      console.log("date after:", isAfter(Date.now(), tempDate));
+      return isAfter(Date.now(), tempDate);
+    }
+    if (week === 4) {
+      const tempDate = parse("8/3/2020", "MM/dd/yyyy", new Date());
+      console.log("date after:", isAfter(Date.now(), tempDate));
+      return isAfter(Date.now(), tempDate);
+    }
+    if (week === 5) {
+      const tempDate = parse("8/10/2020", "MM/dd/yyyy", new Date());
       console.log("date after:", isAfter(Date.now(), tempDate));
       return isAfter(Date.now(), tempDate);
     }
@@ -99,7 +120,6 @@ const GlossaryCard = ({ term }: Props) => {
         >
           {!showDefinition ? "Show " : "Hide "} Definition
         </Button>
-        {mapWeekToDate(term.week) ? "true" : "false"}
       </Flex>
     </PseudoBox>
   );
