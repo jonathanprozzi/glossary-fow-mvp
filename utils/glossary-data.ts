@@ -365,14 +365,14 @@ export const glossaryData: Glossary[] = [
     name: "Align",
     definition:
       "Describes how text is placed on a screen, document, or data cell (left, right, or center).",
-    week: 1,
+    week: 2,
     group: "Sheets",
   },
   {
     id: 148,
     name: "Analyzing",
     definition: "The process of reviewing data to gather useful information.",
-    week: 1,
+    week: 2,
     group: "Sheets",
   },
   {
@@ -380,7 +380,7 @@ export const glossaryData: Glossary[] = [
     name: "Average",
     definition:
       "The middle point of a data set. Calculated by adding all values together then dividing by the number of data points.",
-    week: 1,
+    week: 2,
     group: "Sheets",
   },
   {
@@ -388,7 +388,7 @@ export const glossaryData: Glossary[] = [
     name: "Border",
     definition:
       "A visible box or line between cells. The type of line and thickness can also be adjusted. Can help with the readability of data tables.",
-    week: 1,
+    week: 2,
     group: "Sheets",
   },
   {
@@ -396,7 +396,7 @@ export const glossaryData: Glossary[] = [
     name: "Cell",
     definition:
       "A specific point on a spreadsheet that is determined by the intersection of a column and row",
-    week: 1,
+    week: 2,
     group: "Sheets",
   },
   {
@@ -404,21 +404,21 @@ export const glossaryData: Glossary[] = [
     name: "Column",
     definition:
       "The series of cells that go up and down in a spreadsheet (vertical). They are indicated across the top of a data table.",
-    week: 1,
+    week: 2,
     group: "Sheets",
   },
   {
     id: 153,
     name: "Data point",
     definition: "An exact point in a data table.",
-    week: 1,
+    week: 2,
     group: "Sheets",
   },
   {
     id: 154,
     name: "Executing",
     definition: "Running a formula to make calculations on a data set.",
-    week: 1,
+    week: 2,
     group: "Sheets",
   },
   {
@@ -426,14 +426,14 @@ export const glossaryData: Glossary[] = [
     name: "Formula",
     definition:
       "A mathematical equation that is expressed in symbols. Can be executed in Sheets.",
-    week: 1,
+    week: 2,
     group: "Sheets",
   },
   {
     id: 156,
     name: "Max",
     definition: "The greatest value in a series.",
-    week: 1,
+    week: 2,
     group: "Sheets",
   },
   {
@@ -441,14 +441,14 @@ export const glossaryData: Glossary[] = [
     name: "Merging (cells)",
     definition:
       "The act of combining two or more cells in a spreadsheet. Can often help with readability.",
-    week: 1,
+    week: 2,
     group: "Sheets",
   },
   {
     id: 158,
     name: "Min",
     definition: "The smallest value in a series of numbers.",
-    week: 1,
+    week: 2,
     group: "Sheets",
   },
   {
@@ -456,7 +456,7 @@ export const glossaryData: Glossary[] = [
     name: "Row",
     definition:
       "The series of cells that are right to left (horizontal). They are indicated on the left side of a data table.",
-    week: 1,
+    week: 2,
     group: "Sheets",
   },
   {
@@ -464,7 +464,7 @@ export const glossaryData: Glossary[] = [
     name: "Sorting",
     definition:
       "Organizing the data to display the range of values. This could be from greatest to smallest for numeric values or alphabetical order for text values.",
-    week: 1,
+    week: 2,
     group: "Sheets",
   },
   {
@@ -472,7 +472,7 @@ export const glossaryData: Glossary[] = [
     name: "Spreadsheet",
     definition:
       "A document consisting of a large data table made up of columns and rows.",
-    week: 1,
+    week: 2,
     group: "Sheets",
   },
   {
@@ -480,7 +480,7 @@ export const glossaryData: Glossary[] = [
     name: "Style",
     definition:
       "This can include the colors, fonts, sizing, and overall visual feel of a document or spreadsheet.",
-    week: 1,
+    week: 2,
     group: "Sheets",
   },
   {
@@ -488,14 +488,14 @@ export const glossaryData: Glossary[] = [
     name: "Absolute Questions",
     definition:
       'Using "always" when writing questions. Prevents target audience from giving useful feedback.',
-    week: 1,
+    week: 2,
     group: "Forms",
   },
   {
     id: 164,
     name: "Close Ended Questions",
     definition: "Questions that be answered in a one-word reply.",
-    week: 1,
+    week: 2,
     group: "Forms",
   },
   {
@@ -503,21 +503,21 @@ export const glossaryData: Glossary[] = [
     name: "Data Collection",
     definition:
       "The purposeful act of accumulating accurate information on a subject.",
-    week: 1,
+    week: 2,
     group: "Forms",
   },
   {
     id: 166,
     name: "Double Barreled Question",
     definition: "Asking two or more questions at the same time.",
-    week: 1,
+    week: 2,
     group: "Forms",
   },
   {
     id: 167,
     name: "Form",
     definition: "Tool for creating questions to collect data on a subject.",
-    week: 1,
+    week: 2,
     group: "Forms",
   },
   {
@@ -525,7 +525,7 @@ export const glossaryData: Glossary[] = [
     name: "Leading Questions",
     definition:
       "Questions that force a reader to sway to one side often to the benefit of the surveyor (person asking the question).",
-    week: 1,
+    week: 2,
     group: "Forms",
   },
   {
@@ -533,7 +533,7 @@ export const glossaryData: Glossary[] = [
     name: "Objective",
     definition:
       "Not influenced by personal feelings or prejudices; unbiased in decision.",
-    week: 1,
+    week: 2,
     group: "Forms",
   },
   {
@@ -541,7 +541,7 @@ export const glossaryData: Glossary[] = [
     name: "Open Ended Questions",
     definition:
       "Questions that require more than one word to answer. These generally result in quan data.",
-    week: 1,
+    week: 2,
     group: "Forms",
   },
   {
@@ -549,14 +549,14 @@ export const glossaryData: Glossary[] = [
     name: "Qualitative Data",
     definition:
       "Data based on experiences like feelings, colors, and visual models like paintings",
-    week: 1,
+    week: 2,
     group: "Forms",
   },
   {
     id: 172,
     name: "Quantitative Data",
     definition: "Numerical data",
-    week: 1,
+    week: 2,
     group: "Forms",
   },
   {
@@ -564,7 +564,7 @@ export const glossaryData: Glossary[] = [
     name: "Questionnaires / Surveys",
     definition:
       "A series of questions used to gather information from a target audience.",
-    week: 1,
+    week: 2,
     group: "Forms",
   },
   {
@@ -572,7 +572,7 @@ export const glossaryData: Glossary[] = [
     name: "Target Audience",
     definition:
       "The group of people your data collection or product is aimed toards.",
-    week: 1,
+    week: 2,
     group: "Forms",
   },
   {
@@ -580,21 +580,21 @@ export const glossaryData: Glossary[] = [
     name: "Presentation",
     definition:
       "A slideshow, poster, or talk where someone or a group is presenting a topic and others are listening/observing.",
-    week: 1,
+    week: 2,
     group: "Slides",
   },
   {
     id: 176,
     name: "Slideshow",
     definition: "A series of slides containing images, videos, and/or text.",
-    week: 1,
+    week: 2,
     group: "Slides",
   },
   {
     id: 177,
     name: "Upload",
     definition: "To attach a file to a something.",
-    week: 1,
+    week: 2,
     group: "Slides",
   },
 ];
