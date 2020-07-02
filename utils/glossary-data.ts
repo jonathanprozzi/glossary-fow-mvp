@@ -360,4 +360,127 @@ export const glossaryData: Glossary[] = [
     week: 1,
     group: "Calendar",
   },
+  {
+    id: 147,
+    name: "Align",
+    definition:
+      "Describes how text is placed on a screen, document, or data cell (left, right, or center).",
+    week: 1,
+    group: "Sheets",
+  },
+  {
+    id: 148,
+    name: "Analyzing",
+    definition: "The process of reviewing data to gather useful information.",
+    week: 1,
+    group: "Sheets",
+  },
+  {
+    id: 149,
+    name: "Average",
+    definition:
+      "The middle point of a data set. Calculated by adding all values together then dividing by the number of data points.",
+    week: 1,
+    group: "Sheets",
+  },
+  {
+    id: 150,
+    name: "Border",
+    definition:
+      "A visible box or line between cells. The type of line and thickness can also be adjusted. Can help with the readability of data tables.",
+    week: 1,
+    group: "Sheets",
+  },
+  {
+    id: 151,
+    name: "Cell",
+    definition:
+      "A specific point on a spreadsheet that is determined by the intersection of a column and row",
+    week: 1,
+    group: "Sheets",
+  },
+  {
+    id: 152,
+    name: "Column",
+    definition:
+      "The series of cells that go up and down in a spreadsheet (vertical). They are indicated across the top of a data table.",
+    week: 1,
+    group: "Sheets",
+  },
+  {
+    id: 153,
+    name: "Data point",
+    definition: "An exact point in a data table.",
+    week: 1,
+    group: "Sheets",
+  },
+  {
+    id: 154,
+    name: "Executing",
+    definition: "Running a formula to make calculations on a data set.",
+    week: 1,
+    group: "Sheets",
+  },
+  {
+    id: 155,
+    name: "Formula",
+    definition:
+      "A mathematical equation that is expressed in symbols. Can be executed in Sheets.",
+    week: 1,
+    group: "Sheets",
+  },
+  {
+    id: 156,
+    name: "Max",
+    definition: "The greatest value in a series.",
+    week: 1,
+    group: "Sheets",
+  },
+  {
+    id: 157,
+    name: "Merging (cells)",
+    definition:
+      "The act of combining two or more cells in a spreadsheet. Can often help with readability.",
+    week: 1,
+    group: "Sheets",
+  },
+  {
+    id: 158,
+    name: "Min",
+    definition: "The smallest value in a series of numbers.",
+    week: 1,
+    group: "Sheets",
+  },
+  {
+    id: 159,
+    name: "Row",
+    definition:
+      "The series of cells that are right to left (horizontal). They are indicated on the left side of a data table.",
+    week: 1,
+    group: "Sheets",
+  },
+  {
+    id: 160,
+    name: "Sorting",
+    definition:
+      "Organizing the data to display the range of values. This could be from greatest to smallest for numeric values or alphabetical order for text values.",
+    week: 1,
+    group: "Sheets",
+  },
+  {
+    id: 161,
+    name: "Spreadsheet",
+    definition:
+      "A document consisting of a large data table made up of columns and rows.",
+    week: 1,
+    group: "Sheets",
+  },
+  {
+    id: 162,
+    name: "Style",
+    definition:
+      "This can include the colors, fonts, sizing, and overall visual feel of a document or spreadsheet.",
+    week: 1,
+    group: "Sheets",
+  },
 ];
