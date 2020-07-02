@@ -13,7 +13,7 @@ const GlossaryCard = ({ term }: Props) => {
   // TODO: find way to not hard code the dates
   const mapWeekToDate = (week: number) => {
     if (week === 1) {
-      const tempDate = parse("7/1/2020", "MM/dd/yyyy", new Date());
+      const tempDate = parse("7/13/2020", "MM/dd/yyyy", new Date());
       console.log("date after:", isAfter(Date.now(), tempDate));
       return isAfter(Date.now(), tempDate);
     }
@@ -136,23 +136,69 @@ const GlossaryCard = ({ term }: Props) => {
         overflow="hidden"
         rounded="lg"
         borderWidth="1px"
-        bg="white"
+        bg="gray.100"
         paddingY={4}
         paddingX={2}
       >
-        <Box
-          as="h3"
-          display="flex"
-          flexDirection="column"
-          flexGrow={2}
-          color="gray.500"
-          fontWeight="semibold"
-          letterSpacing="wide"
-          fontSize="md"
-          textTransform="uppercase"
+        <Flex
+          direction="row"
+          align="baseline"
+          justify="center"
+          paddingX={4}
+          paddingTop={4}
         >
-          Check back soon!
-        </Box>
+          <Box
+            as="h3"
+            display="flex"
+            flexDirection="column"
+            flexGrow={2}
+            color="gray.500"
+            fontWeight="semibold"
+            letterSpacing="wide"
+            fontSize="md"
+            textTransform="uppercase"
+          >
+            Check Soon!
+          </Box>
+          <Box d="flex" alignItems="baseline">
+            <Flex direction="row">
+              <Badge
+                rounded="md"
+                marginRight="1"
+                variantColor="gray"
+                variant="outline"
+              >
+                {term.group}
+              </Badge>
+              <Badge
+                rounded="md"
+                marginLeft="1"
+                variantColor="gray"
+                variant="outline"
+              >
+                Week {term.week}
+              </Badge>
+            </Flex>
+          </Box>
+        </Flex>
+        <Flex direction="column" align="center" justify="center" padding={4}>
+          <Box
+            height="150px"
+            display="flex"
+            flexDirection="column"
+            alignItems="center"
+            justifyContent="center"
+          >
+            <Text
+              color="gray.500"
+              letterSpacing={["normal", "normal", "wide", "wide"]}
+              margin="0 auto"
+              paddingBottom={4}
+            >
+              This term will unlock during Week {term.week}.
+            </Text>
+          </Box>
+        </Flex>
       </PseudoBox>
     );
   }
