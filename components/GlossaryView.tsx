@@ -1,29 +1,7 @@
 import { GetStaticProps } from "next";
-import { Glossary } from "../interfaces/";
-import { glossaryData } from "../utils/glossary-data";
 import { Flex, Box } from "@chakra-ui/core";
+import { Glossary } from "../interfaces/";
 import GlossaryGrid from "../components/GlossaryGrid";
-
-// TODO: troubleshoot why getStaticProps isnt passing data into props
-
-const termsTest = [
-  {
-    id: 100,
-    name: "(User) Profile",
-    definition:
-      "The public - facing information about yourself you put online for any program.",
-    week: 1,
-    group: "General",
-  },
-  {
-    id: 101,
-    name: "Cloud",
-    definition:
-      "Servers that are accessed online and hold data. This can serve as a back-up to a computer and prevent too much data saved to a physical device.",
-    week: 1,
-    group: "General",
-  },
-];
 
 type Props = {
   terms: Glossary[];
@@ -38,7 +16,7 @@ const GlossaryView = ({ terms }: Props) => {
         paddingX={[1, 2, 4, 8]}
         paddingY={4}
       >
-        <GlossaryGrid terms={termsTest} />
+        <GlossaryGrid terms={terms} />
       </Box>
     </Flex>
   );
