@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { Glossary } from "../interfaces/";
 import { PseudoBox, Box, Badge, Text, Button, Flex } from "@chakra-ui/core";
 import { parse, isAfter } from "date-fns";
@@ -9,12 +9,11 @@ type Props = {
 
 const GlossaryCard = ({ term }: Props) => {
   const [showDefinition, setShowDefinition] = useState(false);
-  console.log("week", term.week);
 
   // TODO: find way to not hard code the dates
   const mapWeekToDate = (week: number) => {
     if (week === 1) {
-      const tempDate = parse("7/13/2020", "MM/dd/yyyy", new Date());
+      const tempDate = parse("7/1/2020", "MM/dd/yyyy", new Date());
       console.log("date after:", isAfter(Date.now(), tempDate));
       return isAfter(Date.now(), tempDate);
     }
@@ -40,24 +39,106 @@ const GlossaryCard = ({ term }: Props) => {
     }
   };
 
-  return (
-    <PseudoBox
-      width="100%"
-      height="auto"
-      maxW="md"
-      overflow="hidden"
-      rounded="lg"
-      borderWidth="1px"
-      bg="white"
-      paddingY={4}
-      paddingX={2}
-    >
-      <Flex
-        direction="row"
-        align="baseline"
-        justify="center"
-        paddingX={4}
-        paddingTop={4}
+  // mapWeekToDate(term.week) ? "true" : "false")
+
+  if (mapWeekToDate(term.week) === true) {
+    return (
+      <PseudoBox
+        width="100%"
+        height="auto"
+        maxW="md"
+        overflow="hidden"
+        rounded="lg"
+        borderWidth="1px"
+        bg="white"
+        paddingY={4}
+        paddingX={2}
+      >
+        <Flex
+          direction="row"
+          align="baseline"
+          justify="center"
+          paddingX={4}
+          paddingTop={4}
+        >
+          <Box
+            as="h3"
+            display="flex"
+            flexDirection="column"
+            flexGrow={2}
+            color="gray.500"
+            fontWeight="semibold"
+            letterSpacing="wide"
+            fontSize="md"
+            textTransform="uppercase"
+          >
+            {term.name}
+          </Box>
+          <Box d="flex" alignItems="baseline">
+            <Flex direction="row">
+              <Badge
+                rounded="md"
+                marginRight="1"
+                variantColor="purple"
+                variant="outline"
+              >
+                {term.group}
+              </Badge>
+              <Badge
+                rounded="md"
+                marginLeft="1"
+                variantColor="purple"
+                variant="outline"
+              >
+                Week {term.week}
+              </Badge>
+            </Flex>
+          </Box>
+        </Flex>
+        <Flex direction="column" align="center" justify="center" padding={4}>
+          <Box
+            height="150px"
+            display="flex"
+            flexDirection="column"
+            alignItems="center"
+            justifyContent="center"
+          >
+            <Text
+              color="gray.500"
+              letterSpacing={["normal", "normal", "wide", "wide"]}
+              margin="0 auto"
+              paddingBottom={4}
+            >
+              {showDefinition
+                ? term.definition
+                : `Do your best to remember what ${term.name} means!`}
+            </Text>
+          </Box>
+
+          <Button
+            variantColor="purple"
+            variant="outline"
+            onClick={() => setShowDefinition(!showDefinition)}
+          >
+            {!showDefinition ? "Show " : "Hide "} Definition
+          </Button>
+        </Flex>
+      </PseudoBox>
+    );
+  }
+
+  if (mapWeekToDate(term.week) === false) {
+    return (
+      <PseudoBox
+        width="100%"
+        height="auto"
+        maxW="md"
+        overflow="hidden"
+        rounded="lg"
+        borderWidth="1px"
+        bg="white"
+        paddingY={4}
+        paddingX={2}
       >
         <Box
           as="h3"
@@ -70,59 +151,11 @@ const GlossaryCard = ({ term }: Props) => {
           fontSize="md"
           textTransform="uppercase"
         >
-          {term.name}
+          Check back soon!
         </Box>
-        <Box d="flex" alignItems="baseline">
-          <Flex direction="row">
-            <Badge
-              rounded="md"
-              marginRight="1"
-              variantColor="purple"
-              variant="outline"
-            >
-              {term.group}
-            </Badge>
-            <Badge
-              rounded="md"
-              marginLeft="1"
-              variantColor="purple"
-              variant="outline"
-            >
-              Week {term.week}
-            </Badge>
-          </Flex>
-        </Box>
-      </Flex>
-      <Flex direction="column" align="center" justify="center" padding={4}>
-        <Box
-          height="150px"
-          display="flex"
-          flexDirection="column"
-          alignItems="center"
-          justifyContent="center"
-        >
-          <Text
-            color="gray.500"
-            letterSpacing={["normal", "normal", "wide", "wide"]}
-            margin="0 auto"
-            paddingBottom={4}
-          >
-            {showDefinition
-              ? term.definition
-              : `Do your best to remember what ${term.name} means!`}
-          </Text>
-        </Box>
-
-        <Button
-          variantColor="purple"
-          variant="outline"
-          onClick={() => setShowDefinition(!showDefinition)}
-        >
-          {!showDefinition ? "Show " : "Hide "} Definition
-        </Button>
-      </Flex>
-    </PseudoBox>
-  );
+      </PseudoBox>
+    );
+  }
 };
 
 export default GlossaryCard;
