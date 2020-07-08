@@ -1,13 +1,12 @@
 import { useState } from "react";
 import { Glossary } from "../interfaces";
 import { PseudoBox, Box, Badge, Text, Button, Flex } from "@chakra-ui/core";
-import { parse, isAfter } from "date-fns";
 
 type Props = {
   term: Glossary;
 };
 
-const GlossaryCardTimegate = ({ term }: Props) => {
+const GlossaryCard = ({ term }: Props) => {
   const [showDefinition, setShowDefinition] = useState(false);
 
   return (
@@ -51,14 +50,6 @@ const GlossaryCardTimegate = ({ term }: Props) => {
               variant="outline"
             >
               {term.group}
-            </Badge>
-            <Badge
-              rounded="md"
-              marginLeft="1"
-              variantColor="purple"
-              variant="outline"
-            >
-              Week {term.week}
             </Badge>
           </Flex>
         </Box>
