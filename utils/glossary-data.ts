@@ -628,4 +628,36 @@ export const glossaryData: Glossary[] = [
     week: 2,
     group: "Scholarships",
   },
+  {
+    id: 182,
+    name: "Letter of Recommendation",
+    definition:
+      "A letter written by a professional reference that can be included in your applications.",
+    week: 2,
+    group: "Scholarships",
+  },
+  {
+    id: 183,
+    name: "Personal Reference",
+    definition:
+      "Someone you have an informal relationship with and can speak on your character and goals (close friend)",
+    week: 2,
+    group: "Scholarships",
+  },
+  {
+    id: 184,
+    name: "Professional Reference",
+    definition:
+      "Someone you have a formal relationship with that can speak on your work ethic and accomplishments (teacher, colleague, employer)",
+    week: 2,
+    group: "Scholarships",
+  },
+  {
+    id: 185,
+    name: "References",
+    definition:
+      "People who can speak to your character, work ethic, and achievements to a potential employwer",
+    week: 2,
+    group: "Scholarships",
+  },
 ];
