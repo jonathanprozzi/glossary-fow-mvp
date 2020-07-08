@@ -9,6 +9,7 @@ type Props = {
 
 const GlossaryCardTimegate = ({ term }: Props) => {
   const [showDefinition, setShowDefinition] = useState(false);
+  // const [prefersTimegate, setPrefersTimegate] = useState(false);
 
   // TODO: find way to not hard code the dates
   const mapWeekToDate = (week: number) => {
