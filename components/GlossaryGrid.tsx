@@ -1,6 +1,6 @@
 import { Box, Grid } from "@chakra-ui/core";
 import { Glossary } from "../interfaces";
-import GlossaryCard from "./GlossaryCard";
+import GlossaryCard from "./GlossaryCardTimegate";
 
 type Props = {
   terms: Glossary[];
