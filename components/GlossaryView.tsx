@@ -18,7 +18,6 @@ type Props = {
 
 const GlossaryView = ({ terms }: Props) => {
   const [filteredItems, setFilteredItems] = useState(terms);
-  const [searchResults, setSearchResults] = useState(terms);
   const [searchTerm, setSearchTerm] = useState("");
 
   const handleSearchChange = (e: React.ChangeEvent<HTMLInputElement>) => {
@@ -37,15 +36,16 @@ const GlossaryView = ({ terms }: Props) => {
     }
   };
 
-  useEffect(() => {
-    setSearchResults(
-      terms.filter((term) =>
-        term.name.toLowerCase().includes(searchTerm.toLowerCase())
-      )
-    );
-  }, [searchTerm]);
+  // useEffect(() => {
+  //   const results = filteredItems.filter((term) =>
+  //     term.name.toLowerCase().includes(searchTerm.toLowerCase())
+  //   );
+  //   results ? setFilteredItems(results) : setFilteredItems(filteredItems);
+  // }, [searchTerm]);
 
   const groupsList = [...new Set(terms.map((item) => item.group))];
+  console.log("search term", searchTerm);
+  console.log("filtered items", filteredItems);
 
   return (
     <Flex direction="column" justify="center" align="center" gridArea="main">
