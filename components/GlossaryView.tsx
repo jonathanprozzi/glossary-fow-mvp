@@ -1,7 +1,8 @@
 import { useState } from "react";
-import { Flex, Box, ButtonGroup, Button } from "@chakra-ui/core";
+import { Flex, Box, Select } from "@chakra-ui/core";
 import { Glossary } from "../interfaces/";
 import GlossaryGrid from "../components/GlossaryGrid";
+import { RiFilter3Line } from "react-icons/ri";
 
 type Props = {
   terms: Glossary[];
@@ -10,25 +11,35 @@ type Props = {
 const GlossaryView = ({ terms }: Props) => {
   const [filteredItems, setFilteredItems] = useState(terms);
 
-  const handleFilterSelection = (filterTerm: string) => {
-    setFilteredItems(
-      terms.filter(
-        (term) => term.group.toLowerCase() === filterTerm.toLowerCase()
-      )
-    );
+  const handleFilterChange = (filterTerm: string) => {
+    if (filterTerm.toLowerCase() === "all") {
+      setFilteredItems(terms);
+    } else {
+      setFilteredItems(
+        terms.filter(
+          (term) => term.group.toLowerCase() === filterTerm.toLowerCase()
+        )
+      );
+    }
   };
 
   const groupsList = [...new Set(terms.map((item) => item.group))];
   return (
     <Flex direction="column" justify="center" align="center" gridArea="main">
-      <ButtonGroup>
-        {groupsList.map((group, index) => (
-          <Button key={index} onClick={() => handleFilterSelection(group)}>
-            {group}
-          </Button>
+      <Select
+        icon={RiFilter3Line}
+        variant="outline"
+        marginTop={4}
+        onChange={(e) => {
+          console.log("filter selected:", e.target.value);
+          handleFilterChange(e.target.value);
+        }}
+      >
+        {groupsList.map((group) => (
+          <option value={group}>{group}</option>
         ))}
-        <Button onClick={() => setFilteredItems(terms)}>All</Button>
-      </ButtonGroup>
+        <option value="all">All</option>
+      </Select>
       <Box
         maxWidth="960px"
         margin="0 auto"
