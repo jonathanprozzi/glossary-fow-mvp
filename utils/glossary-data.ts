@@ -154,25 +154,25 @@ export const glossaryData: Glossary[] = [
     week: 1,
     group: "General",
   },
-  {
-    id: 120,
-    name: "Zoom",
-    definition: "A paid video conferencing platform.",
-    week: 1,
-    group: "Slack",
-  },
+  // {
+  //   id: 120,
+  //   name: "Zoom",
+  //   definition: "A paid video conferencing platform.",
+  //   week: 1,
+  //   group: "Slack",
+  // },
   {
     id: 121,
     name: "Channels",
-    definition: "A paid video conferencing platform.",
+    definition:
+      "Designated chat rooms that are invite-only and generally have a topic or purpose.",
     week: 1,
     group: "Slack",
   },
   {
     id: 122,
     name: "Direct Messages",
-    definition:
-      "Designated chat rooms that are invite-only and generally have a topic or purpose.",
+    definition: "Messaging someone directly",
     week: 1,
     group: "Slack",
   },
@@ -596,5 +596,36 @@ export const glossaryData: Glossary[] = [
     definition: "To attach a file to a something.",
     week: 2,
     group: "Slides",
+  },
+  {
+    id: 178,
+    name: "Candidates",
+    definition:
+      "People who qualify for an application for an opportunity like a job or scholarship.",
+    week: 2,
+    group: "Scholarships",
+  },
+  {
+    id: 179,
+    name: "Essay",
+    definition:
+      "A thoughtful, long-answer response to a question. Often used in school or scholarship applicaitons.",
+    week: 2,
+    group: "Scholarships",
+  },
+  {
+    id: 180,
+    name: "FAFSA",
+    definition: "Student aid for college",
+    week: 2,
+    group: "Scholarships",
+  },
+  {
+    id: 181,
+    name: "Scholarship",
+    definition:
+      "A sum of money to spend on college expenses that is awarded to an applicant based on their qualifications.",
+    week: 2,
+    group: "Scholarships",
   },
 ];
