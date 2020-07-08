@@ -17,6 +17,7 @@ const GlossaryCard = ({ term }: Props) => {
       overflow="hidden"
       rounded="lg"
       borderWidth="1px"
+      borderColor="purple.100"
       bg="white"
       paddingY={4}
       paddingX={2}

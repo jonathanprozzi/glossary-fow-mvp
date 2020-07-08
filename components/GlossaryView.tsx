@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Flex, Box, Select } from "@chakra-ui/core";
+import { Flex, Box, Select, Text } from "@chakra-ui/core";
 import { Glossary } from "../interfaces/";
 import GlossaryGrid from "../components/GlossaryGrid";
 import { RiFilter3Line } from "react-icons/ri";
@@ -24,22 +24,27 @@ const GlossaryView = ({ terms }: Props) => {
   };
 
   const groupsList = [...new Set(terms.map((item) => item.group))];
+
   return (
     <Flex direction="column" justify="center" align="center" gridArea="main">
-      <Select
-        icon={RiFilter3Line}
-        variant="outline"
-        marginTop={4}
-        onChange={(e) => {
-          console.log("filter selected:", e.target.value);
-          handleFilterChange(e.target.value);
-        }}
-      >
-        {groupsList.map((group) => (
-          <option value={group}>{group}</option>
-        ))}
-        <option value="all">All</option>
-      </Select>
+      <Box>
+        <Select
+          icon={RiFilter3Line}
+          variant="outline"
+          border="1px"
+          borderColor="purple.100"
+          marginTop={4}
+          onChange={(e) => {
+            handleFilterChange(e.target.value);
+            console.log(e.target.value);
+          }}
+        >
+          {groupsList.map((group) => (
+            <option value={group}>{group}</option>
+          ))}
+          <option value="all">All</option>
+        </Select>
+      </Box>
       <Box
         maxWidth="960px"
         margin="0 auto"
