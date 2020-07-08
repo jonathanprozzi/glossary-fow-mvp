@@ -1,11 +1,5 @@
 import { AppProps } from "next/app";
-import {
-  ThemeProvider,
-  theme,
-  CSSReset,
-  Flex,
-  ColorModeProvider,
-} from "@chakra-ui/core";
+import { ThemeProvider, CSSReset, Flex } from "@chakra-ui/core";
 
 import SiteLayout from "../components/SiteLayout";
 
