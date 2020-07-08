@@ -656,8 +656,86 @@ export const glossaryData: Glossary[] = [
     id: 185,
     name: "References",
     definition:
-      "People who can speak to your character, work ethic, and achievements to a potential employwer",
+      "People who can speak to your character, work ethic, and achievements to a potential employer",
     week: 2,
     group: "Scholarships",
+  },
+  {
+    id: 186,
+    name: "Brainstorming",
+    definition: "Coming up with lots of ideas for a single problem",
+    week: 3,
+    group: "PAR",
+  },
+  {
+    id: 187,
+    name: "Career Branding",
+    definition:
+      "Creating a brand for yourself that helps you stand out to potential employers",
+    week: 3,
+    group: "PAR",
+  },
+  {
+    id: 188,
+    name: "Defining",
+    definition: "Finding patterns or themes from your research",
+    week: 3,
+    group: "PAR",
+  },
+  {
+    id: 189,
+    name: "Design Thinking",
+    definition:
+      "Incorporating the thoughts, stories, and ideas of a group of people most impacted by a problem into a solution",
+    week: 3,
+    group: "PAR",
+  },
+  {
+    id: 190,
+    name: "Empathy",
+    definition:
+      "The ability to understand other people's feelings or perspective",
+    week: 3,
+    group: "PAR",
+  },
+  {
+    id: 191,
+    name: "Mind Map",
+    definition:
+      "Diagram representing plans, concepts, or thoughts around a central subject (looks like a sun with rays)",
+    week: 3,
+    group: "PAR",
+  },
+  {
+    id: 192,
+    name: "PAR",
+    definition:
+      "Participatory Action Research; conducting a series of interviews and surveys to learn the needs of a target audience. ",
+    week: 3,
+    group: "PAR",
+  },
+  {
+    id: 193,
+    name: "Perception",
+    definition:
+      "The ability to see, hear, or become aware of something through the senses.",
+    week: 3,
+    group: "PAR",
+  },
+  {
+    id: 194,
+    name: "Prototyping",
+    definition:
+      "A sample of what your final idea might look like. Could be a drawing, a model, or an experience like role play.",
+    week: 3,
+    group: "PAR",
+  },
+  {
+    id: 195,
+    name: "Self-awareness",
+    definition:
+      "The conscious knowledge of one’s own character, feelings, motives, and desires.",
+    week: 3,
+    group: "PAR",
   },
 ];
