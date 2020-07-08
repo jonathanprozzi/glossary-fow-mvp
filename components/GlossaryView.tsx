@@ -1,5 +1,13 @@
-import { useState } from "react";
-import { Flex, Box, Select, Text } from "@chakra-ui/core";
+import { useState, useEffect } from "react";
+import {
+  Flex,
+  Box,
+  Select,
+  InputGroup,
+  InputRightElement,
+  Input,
+  Icon,
+} from "@chakra-ui/core";
 import { Glossary } from "../interfaces/";
 import GlossaryGrid from "../components/GlossaryGrid";
 import { RiFilter3Line } from "react-icons/ri";
@@ -10,6 +18,12 @@ type Props = {
 
 const GlossaryView = ({ terms }: Props) => {
   const [filteredItems, setFilteredItems] = useState(terms);
+  const [searchResults, setSearchResults] = useState(terms);
+  const [searchTerm, setSearchTerm] = useState("");
+
+  const handleSearchChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    setSearchTerm(e.target.value);
+  };
 
   const handleFilterChange = (filterTerm: string) => {
     if (filterTerm.toLowerCase() === "all") {
@@ -23,17 +37,37 @@ const GlossaryView = ({ terms }: Props) => {
     }
   };
 
+  useEffect(() => {
+    setSearchResults(
+      terms.filter((term) =>
+        term.name.toLowerCase().includes(searchTerm.toLowerCase())
+      )
+    );
+  }, [searchTerm]);
+
   const groupsList = [...new Set(terms.map((item) => item.group))];
 
   return (
     <Flex direction="column" justify="center" align="center" gridArea="main">
-      <Box>
+      <Flex direction="row" justify="center" align="center" marginTop={4}>
+        <InputGroup paddingRight={2} width="100%" borderColor="purple.100">
+          <InputRightElement
+            paddingRight={4}
+            children={<Icon name="search" color="purple.400" />}
+          />
+          <Input
+            value={searchTerm}
+            onChange={handleSearchChange}
+            type="text"
+            placeholder="Search for a term"
+          />
+        </InputGroup>
         <Select
           icon={RiFilter3Line}
+          iconColor="purple.300"
           variant="outline"
           border="1px"
           borderColor="purple.100"
-          marginTop={4}
           onChange={(e) => {
             handleFilterChange(e.target.value);
             console.log(e.target.value);
@@ -44,7 +78,7 @@ const GlossaryView = ({ terms }: Props) => {
           ))}
           <option value="all">All</option>
         </Select>
-      </Box>
+      </Flex>
       <Box
         maxWidth="960px"
         margin="0 auto"
