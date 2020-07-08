@@ -2,6 +2,8 @@ import { Box, Grid } from "@chakra-ui/core";
 import { Glossary } from "../interfaces";
 import GlossaryCard from "./GlossaryCard";
 
+// TODO: troubleshoot why key isnt being detected as valid
+
 type Props = {
   terms: Glossary[];
 };
