@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import { Glossary } from "../interfaces/";
 import { PseudoBox, Box, Badge, Text, Button, Flex } from "@chakra-ui/core";
 import { parse, isAfter } from "date-fns";
@@ -38,8 +38,6 @@ const GlossaryCard = ({ term }: Props) => {
       return isAfter(Date.now(), tempDate);
     }
   };
-
-  // mapWeekToDate(term.week) ? "true" : "false")
 
   if (mapWeekToDate(term.week) === true) {
     return (
