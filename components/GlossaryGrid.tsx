@@ -21,9 +21,7 @@ const GlossaryGrid = ({ terms }: Props) => {
         gap={6}
       >
         {terms.map((term) => (
-          <>
-            <GlossaryCard key={term.id} term={term} />
-          </>
+          <GlossaryCard key={term.id} term={term} />
         ))}
       </Grid>
     </Box>
