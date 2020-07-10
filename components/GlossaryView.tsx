@@ -45,9 +45,6 @@ const GlossaryView = ({ terms }: Props) => {
   }, [searchTerm]);
 
   const groupsList = [...new Set(terms.map((item) => item.group))];
-  console.log("search term", searchTerm);
-  console.log("filtered items", filteredItems);
-  console.log("search results", searchResults);
 
   return (
     <Flex direction="column" justify="center" align="center" gridArea="main">
@@ -70,6 +67,7 @@ const GlossaryView = ({ terms }: Props) => {
           variant="outline"
           border="1px"
           borderColor="purple.100"
+          isDisabled={searchTerm}
           onChange={(e) => {
             handleFilterChange(e.target.value);
             console.log(e.target.value);
