@@ -11,7 +11,6 @@ import {
 import { Glossary } from "../interfaces/";
 import GlossaryGrid from "../components/GlossaryGrid";
 import { RiFilter3Line } from "react-icons/ri";
-import { closestIndexTo } from "date-fns/fp";
 
 type Props = {
   terms: Glossary[];
@@ -74,12 +73,12 @@ const GlossaryView = ({ terms }: Props) => {
             console.log(e.target.value);
           }}
         >
+          <option value="all">All</option>
           {groupsList.map((group, index) => (
             <option key={index} value={group}>
               {group}
             </option>
           ))}
-          <option value="all">All</option>
         </Select>
       </Flex>
       <Box
