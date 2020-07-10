@@ -67,7 +67,7 @@ const GlossaryView = ({ terms }: Props) => {
           variant="outline"
           border="1px"
           borderColor="purple.100"
-          isDisabled={searchTerm}
+          isDisabled={searchTerm ? true : false}
           onChange={(e) => {
             handleFilterChange(e.target.value);
             console.log(e.target.value);
