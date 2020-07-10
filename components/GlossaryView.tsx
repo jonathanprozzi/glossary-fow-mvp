@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import {
   Flex,
   Box,
@@ -19,6 +19,7 @@ type Props = {
 const GlossaryView = ({ terms }: Props) => {
   const [filteredItems, setFilteredItems] = useState(terms);
   const [searchTerm, setSearchTerm] = useState("");
+  const [searchResults, setSearchResults] = useState(filteredItems);
 
   const handleSearchChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     setSearchTerm(e.target.value);
@@ -36,16 +37,17 @@ const GlossaryView = ({ terms }: Props) => {
     }
   };
 
-  // useEffect(() => {
-  //   const results = filteredItems.filter((term) =>
-  //     term.name.toLowerCase().includes(searchTerm.toLowerCase())
-  //   );
-  //   results ? setFilteredItems(results) : setFilteredItems(filteredItems);
-  // }, [searchTerm]);
+  useEffect(() => {
+    const results = terms.filter((term) =>
+      term.name.toLowerCase().includes(searchTerm.toLowerCase())
+    );
+    results ? setSearchResults(results) : setSearchResults(filteredItems);
+  }, [searchTerm]);
 
   const groupsList = [...new Set(terms.map((item) => item.group))];
   console.log("search term", searchTerm);
   console.log("filtered items", filteredItems);
+  console.log("search results", searchResults);
 
   return (
     <Flex direction="column" justify="center" align="center" gridArea="main">
@@ -99,9 +101,10 @@ const GlossaryView = ({ terms }: Props) => {
           textTransform="uppercase"
           marginX={[2, 4, 10, 12]}
         >
-          Showing {filteredItems.length} terms
+          Showing {searchTerm ? searchResults.length : filteredItems.length}{" "}
+          terms
         </Box>
-        <GlossaryGrid terms={filteredItems} />
+        <GlossaryGrid terms={searchTerm ? searchResults : filteredItems} />
       </Box>
     </Flex>
   );
