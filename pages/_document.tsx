@@ -7,7 +7,6 @@ export default class MyDocument extends Document {
     return (
       <html>
         <Head>
-          {/* Global Site Tag (gtag.js) - Google Analytics */}
           <script
             async
             src={`https://www.googletagmanager.com/gtag/js?id=${gaID}`}
