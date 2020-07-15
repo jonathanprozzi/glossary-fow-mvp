@@ -710,7 +710,7 @@ export const glossaryData: Glossary[] = [
     id: 192,
     name: "PAR",
     definition:
-      "Participatory Action Research; conducting a series of interviews and surveys to learn the needs of a target audience. ",
+      "Participatory Action Research: Conducting a series of interviews and surveys to learn the needs of a target audience. ",
     week: 3,
     group: "PAR",
   },
