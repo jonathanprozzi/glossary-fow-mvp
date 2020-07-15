@@ -11,7 +11,7 @@ const Header: React.FC = () => {
       w="100vw"
       bg="black"
       boxShadow="md"
-      paddingY={8}
+      paddingY={[12, 12, 8, 8]}
     >
       <Flex
         direction="row"
@@ -21,7 +21,7 @@ const Header: React.FC = () => {
         paddingX={[4, 4, 6, 8]}
       >
         <Heading as="h1" size="xl" color="purple.50">
-          Interactive Glossary
+          Future of Work Interactive Glossary
         </Heading>
       </Flex>
     </Flex>
